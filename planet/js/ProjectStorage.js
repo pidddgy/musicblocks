@@ -173,8 +173,20 @@ function ProjectStorage(Planet) {
     // Ancillary Functions
 
     this.set = function(key, obj) {
+        // console.log("calling this.set");
+        
         var jsonobj = JSON.stringify(obj);
         this.LocalStorage.setItem(key, jsonobj);
+        // // debugger;
+
+        console.log("hello"); // prints hello as expected
+        console.log(typeof localforage) // undefined
+        console.log(localforage); // doesn't print at all
+        console.log("hello2"); // doesn't print at all
+
+        // localforage.setItem(key, obj).then(function(value) {
+        //     console.log("it worked, set "+key+" to "+ value);
+        // });
     };
 
     this.get = function(key) {

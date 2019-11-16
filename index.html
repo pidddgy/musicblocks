@@ -15,6 +15,11 @@
   <noscript>
   JavaScript is required to view this page.
   </noscript>
+  
+  <script src="lib/localforage.min.js" type="module"></script>
+  <script>console.log("HI"); console.log('localforage is: ', localforage); // works as expected
+  </script>
+  
   <script src="dist/app.min.js/?cb=1566155195010" defer>
   </script>
 
@@ -82,7 +87,6 @@
 
   <script src="lib/tweenjs.min.js" defer>
   </script>
-
   <!-- <script src="js/widgets/musickeyboard.js">
   </script> -->
 
@@ -229,7 +233,7 @@
         function hideErrorText() {
           var errorText = document.getElementById("errorText");
           errorText.classList.remove("show");
-          hideArrows(); // This function is declared in js/activity.js
+          hideArrows(); // This function is declared in js/<activity>.js
         }
       </script>
 
